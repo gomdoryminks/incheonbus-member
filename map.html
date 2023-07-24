@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>인천 LIVE 버스</title>
+		<meta name="description" content="인천 LIVE 버스">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+        <!-- Chrome, Firefox, Opera -->
+        <meta name="theme-color" content="#787e96">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#787e96">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#787e96">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" href="img/logo-favicon.ico">
+		<link rel="apple-touch-icon" href="img/logo-favicon.ico">
+		
+		<link href="css/reset.css" type="text/css" rel="stylesheet">
+		<link href="css/font.css" type="text/css" rel="stylesheet">
+		<link href="css/swiper.min.css" type="text/css" rel="stylesheet">
+        <link href="css/slick.css" type="text/css" rel="stylesheet">
+        <link href="css/slick-theme.css" type="text/css" rel="stylesheet">
+        <link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+		<link href="css/member.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/member-function.js"></script>
+        
+        <!-- kakao map api-->
+		<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7c27b395b09309e57fc0371fe6668b50"></script>
+	</head>
+
+	<body>
+        <div class="wrap">
+            <!-- content -->
+            <div class="c-wrap">
+                <!-- c-map : 지도페이지 -->
+                <section class="c-map">
+                    <!-- map-list-area : 통합검색&즐겨찾기 목록 -->
+                    <article class="map-list-area">
+                        <!-- map-list-tab : 통합검색&즐겨찾기 탭 -->
+                        <div class="c-tab-area map-list-tab only-pc">
+                            <ul class="c-tab">
+                                <!-- on : 탭을 선택했을 경우 -->
+                                <li data-tab-type="list" data-tab-name="search">통합검색</li>
+                                <li data-tab-type="list" data-tab-name="bookmark">즐겨찾기</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- map-list-search : 통합검색 영역 -->
+                        <div class="c-tab-item map-list-search" data-tab-type="list" data-tab-name="search"></div>
+                        
+                        <!-- map-list-bookmark : 즐겨찾기 영역 -->
+                        <div class="c-tab-item map-list-bookmark" data-tab-type="list" data-tab-name="bookmark"></div>
+                    </article>
+                    
+                    <!-- map-info-area : 버스&정류장 정보 -->
+                    <article class="map-info-area">
+                        <!-- map-info-btn : 버스&정류장 정보 보이기&숨기기 버튼 -->
+                        <div class="map-info-btn only-mobile" onclick="setMapInfoView(this);"></div>
+                        
+                        <!-- map-info-bus : 버스&정류장 정보 영역 -->
+                        <div class="map-info-item"></div>
+                    </article>
+                    
+                    <!-- mapMainArea : 지도 영역 -->
+                    <article id="mapMainArea" class="map-main-area"></article>
+                    
+                    <!-- map-top-area : 모바일 상단 검색창 -->
+                    <article class="map-top-area only-mobile">
+                        <form id="" name="">
+                            <div class="c-search-box" onclick="openSearchLayer(this);">
+                                <input type="text" id="" name="" class="c-search-input" readonly placeholder="노선번호, 정류장번호를 입력하세요">
+                                <input type="button" value="검색" class="c-search-btn">
+                            </div>
+                        </form>
+                    </article>
+                    
+                    <!-- map-right-area : 오른쪽 메뉴 항목 (레이어, 공지사항, 기록삭제, 버스위치) -->
+                    <article class="map-right-area">
+                        <ul class="map-menu-list">
+                            <li data-menu-type="layer">
+                                <div class="map-menu-item" onclick="openMapMenuLayer(this);">
+                                    <div class="map-menu-img"></div>
+                                    <div class="map-menu-txt">레이어</div>
+                                </div>
+                                
+                                <!-- map-menu-layer-area : 레이어창 -->
+                                <div class="map-menu-layer-area">
+                                    <div class="mml-box">
+                                        <div class="mml-tit-area">
+                                            <div class="mml-tit">레이어</div>
+                                            <button type="button" class="mml-tit-btn" onclick="closeMapMenuLayer(this);">
+                                                <span>레이어닫기</span>
+                                            </button>
+                                        </div>
+                                        <div class="mml-con-area">
+                                            <ul class="mml-list">
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-skyblue.png" alt="간선버스" class="mml-list-img">
+                                                        <div class="mml-list-txt">간선버스</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="" checked>
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-green.png" alt="지선버스" class="mml-list-img">
+                                                        <div class="mml-list-txt">지선버스</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="" checked>
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-red.png" alt="광역버스" class="mml-list-img">
+                                                        <div class="mml-list-txt">광역버스</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="" checked>
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-blue.png" alt="급행버스" class="mml-list-img">
+                                                        <div class="mml-list-txt">급행버스</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="">
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-orange.png" alt="좌석버스" class="mml-list-img">
+                                                        <div class="mml-list-txt">좌석버스</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="">
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="mml-list">
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-number.png" alt="버스번호 표시" class="mml-list-img">
+                                                        <div class="mml-list-txt">버스번호 표시</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="" checked>
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-route.png" alt="버스경로 표시" class="mml-list-img">
+                                                        <div class="mml-list-txt">버스경로 표시</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="" checked>
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="mml-list">
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-bus-station.png" alt="정류장 표시" class="mml-list-img">
+                                                        <div class="mml-list-txt">정류장 표시</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="" checked>
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="mml-list">
+                                                <li>
+                                                    <div class="mml-list-tit">
+                                                        <img src="img/layer-lowbus.png" alt="저상버스만 표시" class="mml-list-img">
+                                                        <div class="mml-list-txt">저상버스만 표시</div>
+                                                    </div>
+                                                    <div class="mml-list-btn">
+                                                        <label class="c-switch-checkbox">
+                                                            <input type="checkbox" id="" name="">
+                                                            <span class="c-switch-bar"></span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mml-mask"></div>
+                                </div>
+                            </li>
+                            <li data-menu-type="notice">
+                                <div class="map-menu-item l-open-btn" onclick="openNoticeListLayer(this);">
+                                    <div class="map-menu-img"></div>
+                                    <div class="map-menu-txt">공지사항</div>
+                                </div>
+                            </li>
+                            <li data-menu-type="delete">
+                                <div class="map-menu-item" onclick="openLayer(`confirm`,`<div class='l-con-img'><img src='img/img-delete.png' alt='기록삭제'></div><div class='l-con-txt'>사용 기록을<br>모두 삭제하시겠습니까?</div>`,`delHistoryAll();`);">
+                                    <div class="map-menu-img"></div>
+                                    <div class="map-menu-txt">기록삭제</div>
+                                </div>
+                            </li>
+                            <li data-menu-type="position">
+                                <div class="map-menu-item" onclick="setBusPosition(this);">
+                                    <div class="map-menu-img"></div>
+                                    <div class="map-menu-txt">버스위치</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                    
+                    <!-- map-bottom-area : 모바일 하단 메뉴 항목 (내위치, 즐겨찾기) -->
+                    <article class="map-bottom-area only-mobile">
+                        <ul class="map-menu-list">
+                            <li data-menu-type="gps">
+                                <div class="map-menu-item" onclick="setGpsPosition(this);">
+                                    <div class="map-menu-img"></div>
+                                    <div class="map-menu-txt">내위치</div>
+                                </div>
+                            </li>
+                            <li data-menu-type="bookmark">
+                                <div class="map-menu-item" onclick="openBookmarkLayer(this);">
+                                    <div class="map-menu-img"></div>
+                                    <div class="map-menu-txt">즐겨찾기</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+            
+            <!-- layer -->
+            <div class="l-wrap">
+                <!-- alert창 -->
+                <div class="l-area" id="alert-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="confirm-btn">
+                                <span>확인</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-mask"></div>
+                </div>
+                
+                <!-- confirm창 -->
+                <div class="l-area" id="confirm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="confirm-btn">
+                                <span>확인</span>
+                            </button>
+                            <button type="button" class="close-btn" onclick="closeLayer(this);">
+                                <span>취소</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-mask"></div>
+                </div>
+                
+                <!-- 공지사항창 -->
+                <div class="l-area l-full-area" id="notice-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <div class="center-ct">
+                                <div class="l-tit-pc">인천 LIVE 버스</div>
+                                <div class="l-tit-mobile">공지사항</div>
+                                <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                                <button type="button" class="l-hidden-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="l-con-area">
+                            <!-- l-notice-list : 공지사항 목록 -->
+                            <div class="l-con-item l-notice-list"></div>
+                            
+                            <!-- l-notice-detail : 공지사항 상세 -->
+                            <div class="l-con-item l-notice-detail"></div>
+                            
+                            <!-- footer -->
+                            <footer class="footer">
+                                <h1 class="not-view">footer</h1>
+
+                                <div class="center-ct">
+                                    <div class="f-info-area">
+                                        <div class="f-info-tit">인천경제자유구역 라이브 버스</div>
+                                        <div class="f-info-con">(22004) 인천광역시 연수구 아트센터대로 175(송도동)<br>Tel (032)120<br>ⓒ Incheon Free Economic Zone Authority.<br>All Rights Reserved.</div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

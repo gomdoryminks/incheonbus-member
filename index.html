@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>인천 LIVE 버스</title>
+		<meta name="description" content="인천 LIVE 버스">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+        <!-- Chrome, Firefox, Opera -->
+        <meta name="theme-color" content="#246fe7">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#246fe7">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#246fe7">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" href="img/logo-favicon.ico">
+		<link rel="apple-touch-icon" href="img/logo-favicon.ico">
+		
+		<link href="css/reset.css" type="text/css" rel="stylesheet">
+		<link href="css/font.css" type="text/css" rel="stylesheet">
+		<link href="css/swiper.min.css" type="text/css" rel="stylesheet">
+        <link href="css/slick.css" type="text/css" rel="stylesheet">
+        <link href="css/slick-theme.css" type="text/css" rel="stylesheet">
+        <link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+		<link href="css/member.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/member-function.js"></script>
+	</head>
+
+	<body>
+        <div class="wrap">
+            <!-- content -->
+            <div class="c-wrap">
+                <!-- c-main : 메인페이지 -->
+                <section class="c-main">
+                    <article class="main-top-area">
+                        <div class="center-ct">
+                            <div class="main-top-txt">
+                                <div class="main-top-tit">인천 LIVE 버스</div>
+                                <div class="main-top-con">
+                                    <div class="con-item">나의 버스는 지금 어디?<br>인공위성이 보고 있는 실시간 버스 위치 그대로!</div>
+                                    <div class="con-item">손안에서 살아 움직이는 라이브 버스로<br>생생하게 확인하세요!</div>
+                                </div>
+                            </div>
+                            
+                            <div class="main-top-img"></div>
+                        </div>
+                    </article>
+                    
+                    <article class="main-main-area">
+                        <div class="center-ct">
+                            <div class="main-menu-area">
+                                <div class="main-menu-item">
+                                    <button type="button" class="live-bus-btn" onclick="location.href='map.html';">
+                                        <span>라이브 버스<br>시작하기</span>
+                                    </button>
+                                </div>
+                                <div class="main-menu-item">
+                                    <button type="button" class="route-btn l-open-btn" onclick="openRouteGuideLayer(this);">
+                                        <span>노선안내</span>
+                                    </button>
+                                    <button type="button" class="price-btn l-open-btn" onclick="openPriceGuideLayer(this);">
+                                        <span>요금안내</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="main-notice-area">
+                                <div class="main-notice-top">
+                                    <div class="main-notice-tit">공지사항 <span>Notice</span></div>
+                                    <button type="button" class="more-btn l-open-btn" onclick="openNoticeListLayer(this);">
+                                        <span>더보기</span>
+                                    </button>
+                                </div>
+                                <ul class="main-notice-list">
+                                    <li>
+                                        <div class="tit">
+                                            <a href="javascript:void(0);" class="l-open-btn" onclick="openNoticeDetailLayer(this);">인천 라이브 버스 공지사항 제목입니다.</a>
+                                        </div>
+                                        <div class="date">2023-06-19</div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">
+                                            <a href="javascript:void(0);" class="l-open-btn" onclick="openNoticeDetailLayer(this);">인천 라이브 버스 공지사항 제목입니다.</a>
+                                        </div>
+                                        <div class="date">2023-06-19</div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">
+                                            <a href="javascript:void(0);" class="l-open-btn" onclick="openNoticeDetailLayer(this);">인천 라이브 버스 공지사항 제목입니다.</a>
+                                        </div>
+                                        <div class="date">2023-06-19</div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">
+                                            <a href="javascript:void(0);" class="l-open-btn" onclick="openNoticeDetailLayer(this);">인천 라이브 버스 공지사항 제목입니다.</a>
+                                        </div>
+                                        <div class="date">2023-06-19</div>
+                                    </li>
+                                    <li>
+                                        <div class="tit">
+                                            <a href="javascript:void(0);" class="l-open-btn" onclick="openNoticeDetailLayer(this);">인천 라이브 버스 공지사항 제목입니다.</a>
+                                        </div>
+                                        <div class="date">2023-06-19</div>
+                                    </li>
+                                    <li>
+                                        <div class="empty">등록된 공지사항이 없습니다.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- footer -->
+                    <footer class="footer">
+                        <h1 class="not-view">footer</h1>
+                        
+                        <div class="center-ct">
+                            <div class="f-info-area">
+                                <div class="f-info-tit">인천경제자유구역 라이브 버스</div>
+                                <div class="f-info-con">(22004) 인천광역시 연수구 아트센터대로 175(송도동)<br>Tel (032)120<br>ⓒ Incheon Free Economic Zone Authority.<br>All Rights Reserved.</div>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+            
+            <!-- layer -->
+            <div class="l-wrap">
+                <!-- alert창 -->
+                <div class="l-area" id="alert-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="confirm-btn">
+                                <span>확인</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-mask"></div>
+                </div>
+                
+                <!-- confirm창 -->
+                <div class="l-area" id="confirm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="confirm-btn">
+                                <span>확인</span>
+                            </button>
+                            <button type="button" class="close-btn" onclick="closeLayer(this);">
+                                <span>취소</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-mask"></div>
+                </div>
+                
+                <!-- 공지사항창 -->
+                <div class="l-area l-full-area" id="notice-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <div class="center-ct">
+                                <div class="l-tit-pc">인천 LIVE 버스</div>
+                                <div class="l-tit-mobile">공지사항</div>
+                                <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                                <button type="button" class="l-hidden-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="l-con-area">
+                            <!-- l-notice-list : 공지사항 목록 -->
+                            <div class="l-con-item l-notice-list"></div>
+                            
+                            <!-- l-notice-detail : 공지사항 상세 -->
+                            <div class="l-con-item l-notice-detail"></div>
+                            
+                            <!-- footer -->
+                            <footer class="footer">
+                                <h1 class="not-view">footer</h1>
+
+                                <div class="center-ct">
+                                    <div class="f-info-area">
+                                        <div class="f-info-tit">인천경제자유구역 라이브 버스</div>
+                                        <div class="f-info-con">(22004) 인천광역시 연수구 아트센터대로 175(송도동)<br>Tel (032)120<br>ⓒ Incheon Free Economic Zone Authority.<br>All Rights Reserved.</div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 노선안내창 -->
+                <div class="l-area l-full-area" id="route-guide-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <div class="center-ct">
+                                <div class="l-tit-pc">인천 LIVE 버스</div>
+                                <div class="l-tit-mobile">노선안내</div>
+                                <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                                <button type="button" class="l-hidden-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="l-con-area">
+                            <!-- l-route-guide : 노선안내 -->
+                            <div class="l-con-item l-route-guide"></div>
+                            
+                            <!-- footer -->
+                            <footer class="footer">
+                                <h1 class="not-view">footer</h1>
+
+                                <div class="center-ct">
+                                    <div class="f-info-area">
+                                        <div class="f-info-tit">인천경제자유구역 라이브 버스</div>
+                                        <div class="f-info-con">(22004) 인천광역시 연수구 아트센터대로 175(송도동)<br>Tel (032)120<br>ⓒ Incheon Free Economic Zone Authority.<br>All Rights Reserved.</div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 요금안내창 -->
+                <div class="l-area l-full-area" id="price-guide-layer">
+                    <div class="l-box">
+                        <div class="l-tit-area">
+                            <div class="center-ct">
+                                <div class="l-tit-pc">인천 LIVE 버스</div>
+                                <div class="l-tit-mobile">요금안내</div>
+                                <button type="button" class="l-tit-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                                <button type="button" class="l-hidden-btn" onclick="closeLayer(this);">
+                                    <span>레이어닫기</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="l-con-area">
+                            <!-- l-price-guide : 요금안내 -->
+                            <div class="l-con-item l-price-guide"></div>
+                            
+                            <!-- footer -->
+                            <footer class="footer">
+                                <h1 class="not-view">footer</h1>
+
+                                <div class="center-ct">
+                                    <div class="f-info-area">
+                                        <div class="f-info-tit">인천경제자유구역 라이브 버스</div>
+                                        <div class="f-info-con">(22004) 인천광역시 연수구 아트센터대로 175(송도동)<br>Tel (032)120<br>ⓒ Incheon Free Economic Zone Authority.<br>All Rights Reserved.</div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
