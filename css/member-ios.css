@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/************************************************
+
+					setting
+
+*************************************************/
+body {
+    padding: calc(constant(safe-area-inset-top) + 0px) calc(constant(safe-area-inset-right) + 0px) calc(constant(safe-area-inset-bottom) + 0px) calc(constant(safe-area-inset-left) + 0px);
+    padding: calc(env(safe-area-inset-top) + 0px) calc(env(safe-area-inset-right) + 0px) calc(env(safe-area-inset-bottom) + 0px) calc(env(safe-area-inset-left) + 0px);
+}
+
+/************************************************
+
+					main
+
+*************************************************/
+.c-main {
+    min-height: calc(constant(safe-area-inset-bottom) + 100vh);
+    min-height: calc(env(safe-area-inset-bottom) + 100vh);
+}
+
+/************************************************
+
+					map
+
+*************************************************/
+.c-map {
+    height: calc(constant(safe-area-inset-bottom) + 100vh);
+    height: calc(env(safe-area-inset-bottom) + 100vh);
+}
+
+@media screen and (max-width: 767px) {
+    .c-map .map-list-area>.c-tab-item {
+        top: calc(constant(safe-area-inset-top) + 0px);
+        top: calc(env(safe-area-inset-top) + 0px);
+    }
+    .c-map .map-menu-list>li .map-menu-layer-area {
+        top: calc(constant(safe-area-inset-top) + 0px);
+        top: calc(env(safe-area-inset-top) + 0px);
+    }
+}
+
+/************************************************
+
+					layer
+
+*************************************************/
+.l-area {
+    top: calc(constant(safe-area-inset-top) + 0px);
+    top: calc(env(safe-area-inset-top) + 0px);
+}
+.l-area .l-box .l-con-area {
+    max-height: calc(constant(safe-area-inset-bottom) + 100vh - 98px);
+	max-height: calc(env(safe-area-inset-bottom) + 100vh - 98px);
+}
+.l-full-area .l-box .l-con-area {
+    height: calc(constant(safe-area-inset-bottom) + 100vh - 43px);
+	height: calc(env(safe-area-inset-bottom) + 100vh - 43px);
+    max-height: none;
+}
+
+@media screen and (max-width: 767px) {
+    .l-full-area .l-box .l-con-area {
+        height: calc(constant(safe-area-inset-bottom) + 100vh - 39px);
+        height: calc(env(safe-area-inset-bottom) + 100vh - 39px);
+    }
+}
+

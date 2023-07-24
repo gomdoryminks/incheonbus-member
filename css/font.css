@@ -1,0 +1,319 @@
+@charset "utf-8"; 
+
+/* 
+    U+0020-007E : 전체
+    U+AC00-U+D7A3 : 한글
+    U+0030-0039 : 숫자
+    U+0041-005A : 대문자
+    U+0061-007A : 소문자
+    U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E : 특수문자
+*/
+
+@font-face {
+	font-family: 'NotoSansKR';
+    font-style: normal;
+	font-weight: 100;
+	src: url('../font/NotoSansKR-Thin.eot');
+	src: url('../font/NotoSansKR-Thin.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Thin.woff') format('woff'),
+         url('../font/NotoSansKR-Thin.woff2') format('woff2'),
+		 url('../font/NotoSansKR-Thin.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+    font-style: normal;
+	font-weight: 300;
+	src: url('../font/NotoSansKR-Light.eot');
+	src: url('../font/NotoSansKR-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Light.woff') format('woff'),
+         url('../font/NotoSansKR-Light.woff2') format('woff2'),
+		 url('../font/NotoSansKR-Light.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+    font-style: normal;
+	font-weight: 400;
+	src: url('../font/NotoSansKR-Regular.eot');
+	src: url('../font/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Regular.woff') format('woff'),
+         url('../font/NotoSansKR-Regular.woff2') format('woff2'),
+		 url('../font/NotoSansKR-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+    font-style: normal;
+	font-weight: 500;
+	src: url('../font/NotoSansKR-Medium.eot');
+	src: url('../font/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Medium.woff') format('woff'),
+         url('../font/NotoSansKR-Medium.woff2') format('woff2'),
+		 url('../font/NotoSansKR-Medium.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+    font-style: normal;
+	font-weight: 700;
+	src: url('../font/NotoSansKR-Bold.eot');
+	src: url('../font/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Bold.woff') format('woff'),
+         url('../font/NotoSansKR-Bold.woff2') format('woff2'),
+		 url('../font/NotoSansKR-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+    font-style: normal;
+	font-weight: 900;
+	src: url('../font/NotoSansKR-Black.eot');
+	src: url('../font/NotoSansKR-Black.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Black.woff') format('woff'),
+         url('../font/NotoSansKR-Black.woff2') format('woff2'),
+		 url('../font/NotoSansKR-Black.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'ONE Mobile';
+    font-style: normal;
+	font-weight: 300;
+	src: url('../font/ONE-Mobile-OTF-Light.eot');
+	src: url('../font/ONE-Mobile-OTF-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../font/ONE-Mobile-OTF-Light.woff') format('woff'),
+         url('../font/ONE-Mobile-OTF-Light.woff2') format('woff2'),
+		 url('../font/ONE-Mobile-OTF-Light.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'ONE Mobile';
+    font-style: normal;
+	font-weight: 400;
+	src: url('../font/ONE-Mobile-OTF-Regular.eot');
+	src: url('../font/ONE-Mobile-OTF-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../font/ONE-Mobile-OTF-Regular.woff') format('woff'),
+         url('../font/ONE-Mobile-OTF-Regular.woff2') format('woff2'),
+		 url('../font/ONE-Mobile-OTF-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'ONE Mobile';
+    font-style: normal;
+	font-weight: 700;
+	src: url('../font/ONE-Mobile-OTF-Bold.eot');
+	src: url('../font/ONE-Mobile-OTF-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/ONE-Mobile-OTF-Bold.woff') format('woff'),
+         url('../font/ONE-Mobile-OTF-Bold.woff2') format('woff2'),
+		 url('../font/ONE-Mobile-OTF-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'ONE Mobile Title';
+    font-style: normal;
+	font-weight: 400;
+	src: url('../font/ONE-Mobile-Title-OTF.eot');
+	src: url('../font/ONE-Mobile-Title-OTF.eot?#iefix') format('embedded-opentype'),
+		 url('../font/ONE-Mobile-Title-OTF.woff') format('woff'),
+         url('../font/ONE-Mobile-Title-OTF.woff2') format('woff2'),
+		 url('../font/ONE-Mobile-Title-OTF.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 100;
+	src: url('../font/Inter-Thin.eot');
+	src: url('../font/Inter-Thin.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-Thin.woff') format('woff'),
+         url('../font/Inter-Thin.woff2') format('woff2'),
+		 url('../font/Inter-Thin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 200;
+	src: url('../font/Inter-ExtraLight.eot');
+	src: url('../font/Inter-ExtraLight.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-ExtraLight.woff') format('woff'),
+         url('../font/Inter-ExtraLight.woff2') format('woff2'),
+		 url('../font/Inter-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 300;
+	src: url('../font/Inter-Light.eot');
+	src: url('../font/Inter-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-Light.woff') format('woff'),
+         url('../font/Inter-Light.woff2') format('woff2'),
+		 url('../font/Inter-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 400;
+	src: url('../font/Inter-Regular.eot');
+	src: url('../font/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-Regular.woff') format('woff'),
+         url('../font/Inter-Regular.woff2') format('woff2'),
+		 url('../font/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 500;
+	src: url('../font/Inter-Medium.eot');
+	src: url('../font/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-Medium.woff') format('woff'),
+         url('../font/Inter-Medium.woff2') format('woff2'),
+		 url('../font/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 600;
+	src: url('../font/Inter-SemiBold.eot');
+	src: url('../font/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-SemiBold.woff') format('woff'),
+         url('../font/Inter-SemiBold.woff2') format('woff2'),
+		 url('../font/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 700;
+	src: url('../font/Inter-Bold.eot');
+	src: url('../font/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-Bold.woff') format('woff'),
+         url('../font/Inter-Bold.woff2') format('woff2'),
+		 url('../font/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 800;
+	src: url('../font/Inter-ExtraBold.eot');
+	src: url('../font/Inter-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-ExtraBold.woff') format('woff'),
+         url('../font/Inter-ExtraBold.woff2') format('woff2'),
+		 url('../font/Inter-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Inter';
+    font-style: normal;
+	font-weight: 900;
+	src: url('../font/Inter-Black.eot');
+	src: url('../font/Inter-Black.eot?#iefix') format('embedded-opentype'),
+		 url('../font/Inter-Black.woff') format('woff'),
+         url('../font/Inter-Black.woff2') format('woff2'),
+		 url('../font/Inter-Black.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 100;
+	src: url('../font/SCDream1.eot');
+	src: url('../font/SCDream1.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream1.woff') format('woff'),
+         url('../font/SCDream1.woff2') format('woff2'),
+		 url('../font/SCDream1.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 200;
+	src: url('../font/SCDream2.eot');
+	src: url('../font/SCDream2.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream2.woff') format('woff'),
+         url('../font/SCDream2.woff2') format('woff2'),
+		 url('../font/SCDream2.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 300;
+	src: url('../font/SCDream3.eot');
+	src: url('../font/SCDream3.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream3.woff') format('woff'),
+         url('../font/SCDream3.woff2') format('woff2'),
+		 url('../font/SCDream3.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 400;
+	src: url('../font/SCDream4.eot');
+	src: url('../font/SCDream4.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream4.woff') format('woff'),
+         url('../font/SCDream4.woff2') format('woff2'),
+		 url('../font/SCDream4.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 500;
+	src: url('../font/SCDream5.eot');
+	src: url('../font/SCDream5.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream5.woff') format('woff'),
+         url('../font/SCDream5.woff2') format('woff2'),
+		 url('../font/SCDream5.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 600;
+	src: url('../font/SCDream6.eot');
+	src: url('../font/SCDream6.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream6.woff') format('woff'),
+         url('../font/SCDream6.woff2') format('woff2'),
+		 url('../font/SCDream6.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 700;
+	src: url('../font/SCDream7.eot');
+	src: url('../font/SCDream7.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream7.woff') format('woff'),
+         url('../font/SCDream7.woff2') format('woff2'),
+		 url('../font/SCDream7.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 800;
+	src: url('../font/SCDream8.eot');
+	src: url('../font/SCDream8.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream8.woff') format('woff'),
+         url('../font/SCDream8.woff2') format('woff2'),
+		 url('../font/SCDream8.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'SCDream';
+    font-style: normal;
+	font-weight: 900;
+	src: url('../font/SCDream9.eot');
+	src: url('../font/SCDream9.eot?#iefix') format('embedded-opentype'),
+		 url('../font/SCDream9.woff') format('woff'),
+         url('../font/SCDream9.woff2') format('woff2'),
+		 url('../font/SCDream9.otf') format('opentype');
+}
+
