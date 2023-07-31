@@ -325,7 +325,7 @@ footer.footer .f-info-area .f-info-con {
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 .wrap .c-switch-checkbox input[type='checkbox']:checked + .c-switch-bar:before {
     left: calc(100% - 18px);
@@ -1338,7 +1338,7 @@ footer.footer .f-info-area .f-info-con {
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 .c-map .map-list-area .map-list-main>.c-tab-item.on {
     display: -ms-flexbox;
@@ -2346,7 +2346,7 @@ footer.footer .f-info-area .f-info-con {
         -webkit-transition: all 0.2s ease;
         -moz-transition: all 0.2s ease;
         -ms-transition: all 0.2s ease;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
     }
     .c-map .map-info-area.show {
         height: 100%;
