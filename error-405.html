@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>인천 LIVE 버스</title>
+		<meta name="description" content="인천 LIVE 버스">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+        <!-- Chrome, Firefox, Opera -->
+        <meta name="theme-color" content="#246fe7">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#246fe7">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#246fe7">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" href="img/logo-favicon.ico">
+		<link rel="apple-touch-icon" href="img/logo-favicon.ico">
+		
+		<link href="css/reset.css" type="text/css" rel="stylesheet">
+		<link href="css/font.css" type="text/css" rel="stylesheet">
+		<link href="css/swiper.min.css" type="text/css" rel="stylesheet">
+        <link href="css/slick.css" type="text/css" rel="stylesheet">
+        <link href="css/slick-theme.css" type="text/css" rel="stylesheet">
+        <link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+		<link href="css/member.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/member-function.js"></script>
+	</head>
+
+	<body>
+        <div class="wrap">
+            <!-- content -->
+            <div class="c-wrap">
+                <!-- c-page : 기본페이지 -->
+                <section class="c-page">
+                    <!-- header -->
+                    <header class="header">
+                        <h1 class="not-view">header</h1>
+                        
+                        <div class="center-ct">
+                            <div class="h-tit">인천 LIVE 버스</div>
+                        </div>
+                    </header>
+                    
+                    <article class="error-area">
+                        <div class="error-top-area only-pc"></div>
+                        
+                        <div class="error-main-area">
+                            <div class="center-ct">
+                                <div class="error-img-area">
+                                    <img src="img/img-error.png" alt="에러 이미지">
+                                </div>
+                                <div class="error-txt-area">
+                                    <div class="medium">405</div>
+                                    <div class="big">요청된 메소드가 허용되지 않습니다.</div>
+                                    <button type="button" class="c-btn03" onclick="location.href='index.html';">
+                                        <span>메인으로 가기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- footer -->
+                    <footer class="footer">
+                        <h1 class="not-view">footer</h1>
+                        
+                        <div class="center-ct">
+                            <div class="f-info-area">
+                                <div class="f-info-tit">인천경제자유구역 라이브 버스</div>
+                                <div class="f-info-con">(22004) 인천광역시 연수구 아트센터대로 175(송도동)<br>Tel (032)120<br>ⓒ Incheon Free Economic Zone Authority.<br>All Rights Reserved.</div>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+            
+            <!-- layer -->
+            <div class="l-wrap">
+                <!-- alert창 -->
+                <div class="l-area" id="alert-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="confirm-btn">
+                                <span>확인</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-mask"></div>
+                </div>
+                
+                <!-- confirm창 -->
+                <div class="l-area" id="confirm-layer">
+                    <div class="l-box">
+                        <div class="l-con-area">
+                            <div class="l-con"></div>
+                        </div>
+                        <div class="l-btn-area">
+                            <button type="button" class="confirm-btn">
+                                <span>확인</span>
+                            </button>
+                            <button type="button" class="close-btn" onclick="closeLayer(this);">
+                                <span>취소</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-mask"></div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
