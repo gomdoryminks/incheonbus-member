@@ -10,6 +10,18 @@ body {
     padding: calc(env(safe-area-inset-top) + 0px) calc(env(safe-area-inset-right) + 0px) calc(env(safe-area-inset-bottom) + 0px) calc(env(safe-area-inset-left) + 0px);
 }
 
+/* 20230811 수정부분 start */
+/************************************************
+
+					page
+
+*************************************************/
+.c-page {
+    min-height: calc(constant(safe-area-inset-bottom) + 100vh);
+    min-height: calc(env(safe-area-inset-bottom) + 100vh);
+}
+/* 20230811 수정부분 end */
+
 /************************************************
 
 					main
