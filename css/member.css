@@ -2267,7 +2267,7 @@ footer.footer .f-info-area .f-info-con {
     border: 1px solid #a6a9b4;
 }
 .c-map .map-menu-list>li .map-menu-item .map-menu-img {
-    width: 18px;
+    width: 100%;
     height: 18px;
     margin: -2px auto 2px;
 }
